@@ -1,0 +1,7 @@
+pragma foreign_keys=on;
+create table Info_pas (pas_seria integer, pas_nomer integer , pas_s string , pas_n string , pas_och string  , id integer primary key);
+create table Info_id (check_num integer primary key, id integer);
+create table Info_block (check_num integer primary key,  block integer);
+create table Info_sum (check_num integer primary key, sum double, curr int);
+create table Info_credit (credit_id integer primary key, id integer , s integer , n integer , avr_mnt_cash integer , cash_per_month double);
+create table Kurs (w_date string, curr integer , sell double , buy double , primary key(w_date , curr)); 

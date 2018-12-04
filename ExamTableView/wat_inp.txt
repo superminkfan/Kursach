@@ -1,0 +1,16 @@
+insert into Info_pas values (1234 , 5678 , 'Zikunov' , 'Semen' , 'Yurjevich' , 1);
+insert into Info_id values (42 , 1);
+insert into Info_block values (42, 0);
+insert into Info_sum values (42 , 150 , 1);
+insert into Info_id values (44 , 1);
+insert into Info_block values (44 , 0);
+insert into Info_sum values (44 , 252 , 3);
+insert into Info_pas values (4321 , 8765, 'Narushkina' , 'Ekaterina' , 'Allekseevna' , 2);
+insert into Info_id values (43 , 2);
+insert into Info_block values (43 , 0);
+insert into Info_sum values (43 , 777 , 2);
+insert into Info_credit values (1 , 1 , 1000 , 15 , 13500 , 228);
+insert into Info_credit values (2 , 2 , 720 , 42 , 42000 , 229);
+insert into Kurs values('2018-11-24' , 2 , 55.8 , 59.4);
+insert into Kurs values('2018-11-24' , 3 , 65.3 , 71.5);
+

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1490.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+  <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="804.0" layoutX="919.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="533.0" />
+    <TableView fx:id="pas_table" layoutX="8.0" layoutY="261.0" prefHeight="155.0" prefWidth="898.0">
+      <columns>
+
+        <TableColumn fx:id="pas_seria" prefWidth="135.0" text="Серия паспорта" />
+        <TableColumn fx:id="pas_nomer" prefWidth="135.0" text="Номер паспорта" />
+        <TableColumn fx:id="pas_s" prefWidth="100.0" text="Фамилия" />
+        <TableColumn fx:id="pas_n" prefWidth="100.0" text="Имя" />
+        <TableColumn fx:id="pas_och" prefWidth="100.0" text="Отчество" />
+        <TableColumn fx:id="check_num" prefWidth="110.0" text="Номер счёта" />
+            <TableColumn fx:id="block" prefWidth="75.0" text="Блок" />
+            <TableColumn fx:id="sum" prefWidth="75.0" text="Сумма" />
+            <TableColumn fx:id="curr" prefWidth="72.0" text="Валюта" />
+      </columns>
+    </TableView>
+    <Label layoutX="27.0" layoutY="218.0" text="Таблица клиентов">
+      <font>
+        <Font name="Verdana" size="24.0" />
+      </font>
+    </Label>
+      <TabPane layoutX="8.0" layoutY="421.0" prefHeight="424.0" prefWidth="898.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_create_check" text="Создание счёта">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="835.0">
+                     <children>
+                        <TextField fx:id="pas_seria_inp" layoutX="160.0" layoutY="14.0" />
+                        <TextField fx:id="pas_nomer_inp" layoutX="160.0" layoutY="62.0" />
+                        <TextField fx:id="pas_s_inp" layoutX="160.0" layoutY="112.0" />
+                        <TextField fx:id="pas_n_inp" layoutX="160.0" layoutY="165.0" />
+                        <Label layoutX="16.0" layoutY="19.0" text="Серия паспорта" />
+                        <Label layoutX="16.0" layoutY="67.0" text="Номер пасспорта" />
+                        <Label layoutX="16.0" layoutY="117.0" text="Фамилия" />
+                        <Label layoutX="16.0" layoutY="170.0" text="Имя" />
+                        <Label layoutX="14.0" layoutY="223.0" text="Отчество" />
+                        <TextField fx:id="pas_och_inp" layoutX="160.0" layoutY="218.0" />
+                        <TextArea fx:id="wat_happen" layoutX="461.0" layoutY="49.0" prefHeight="189.0" prefWidth="341.0" />
+                        <Button fx:id="enter_bt1" layoutX="531.0" layoutY="252.0" mnemonicParsing="false" onAction="#onClick_ent" prefHeight="31.0" prefWidth="200.0" text="Ввод" />
+                        <ComboBox fx:id="curr_ent" layoutX="160.0" layoutY="263.0" prefHeight="31.0" prefWidth="187.0" />
+                        <Label layoutX="14.0" layoutY="268.0" text="Валюта" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_work_check" text="Ввод/Вывод средств">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="898.0">
+                    <children>
+                        <TextField fx:id="pas_seria_inp2" layoutX="158.0" layoutY="14.0" />
+                        <TextField fx:id="pas_nomer_inp2" layoutX="158.0" layoutY="62.0" />
+                        <TextField fx:id="pas_s_inp2" layoutX="158.0" layoutY="112.0" />
+                        <TextField fx:id="pas_n_inp2" layoutX="158.0" layoutY="165.0" />
+                        <Label layoutX="14.0" layoutY="19.0" text="Серия паспорта" />
+                        <Label layoutX="14.0" layoutY="67.0" text="Номер пасспорта" />
+                        <Label layoutX="14.0" layoutY="117.0" text="Фамилия" />
+                        <Label layoutX="16.0" layoutY="160.0" text="Имя" />
+                        <Label layoutX="16.0" layoutY="213.0" text="Отчество" />
+                        <TextField fx:id="sum_inp2" layoutX="567.0" layoutY="14.0" />
+                        <TextArea fx:id="wat_happen_2" layoutX="499.0" layoutY="81.0" prefHeight="73.0" prefWidth="310.0" />
+                        <Button fx:id="upt_bt" layoutX="529.0" layoutY="314.0" mnemonicParsing="false" onAction="#onClick_upt" prefHeight="31.0" prefWidth="200.0" text="Ввод" />
+                        <TextField fx:id="check_num_inp2" layoutX="160.0" layoutY="264.0" />
+                        <Label layoutX="14.0" layoutY="269.0" text="Номер счёта" />
+                        <Label layoutX="490.0" layoutY="19.0" text="Сумма " />
+                        <TextField fx:id="pas_och_inp2" layoutX="160.0" layoutY="208.0" />
+                        <Label layoutX="548.0" layoutY="54.0" text="*поставь минус если снимаешь деньги">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="curr_upt" layoutX="160.0" layoutY="314.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="319.0" text="Валюта" />
+                        <TableView fx:id="kurs_table" layoutX="493.0" layoutY="156.0" prefHeight="136.0" prefWidth="306.0">
+                          <columns>
+                            <TableColumn fx:id="date_column" prefWidth="75.0" text="Дата" />
+                            <TableColumn fx:id="curr_column" text="Валюта" />
+                              <TableColumn fx:id="buy_column" prefWidth="70.0" text="Покупка" />
+                              <TableColumn fx:id="sell_column" prefWidth="75.0" text="Продажа" />
+                          </columns>
+                        </TableView>
+                    </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_credit" text="Кредит">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="828.0">
+                     <children>
+                        <TextField fx:id="pas_seria_inp3" layoutX="148.0" layoutY="45.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="pas_nomer_inp3" layoutX="148.0" layoutY="99.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="pas_s_inp3" layoutX="148.0" layoutY="155.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="pas_n_inp3" layoutX="148.0" layoutY="209.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="pas_och_inp3" layoutX="148.0" layoutY="261.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="s_inp3" layoutX="371.0" layoutY="40.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="n_inp3" layoutX="372.0" layoutY="95.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextField fx:id="avr_mnth_cash_inp3" layoutX="372.0" layoutY="152.0" prefHeight="31.0" prefWidth="130.0" />
+                        <TextArea fx:id="wat_happen_3" layoutX="519.0" layoutY="39.0" prefHeight="144.0" prefWidth="283.0" />
+                        <Button fx:id="credit_bt" layoutX="321.0" layoutY="253.0" mnemonicParsing="false" onAction="#onClick_credit" prefHeight="48.0" prefWidth="121.0" text="Button" />
+                        <Label layoutX="14.0" layoutY="46.0" text="Серия пасспорта" />
+                        <Label layoutX="14.0" layoutY="101.0" text="Номер пасспорта" />
+                        <Label layoutX="14.0" layoutY="158.0" text="Фамилия" />
+                        <Label layoutX="14.0" layoutY="210.0" text="Имя" />
+                        <Label layoutX="14.0" layoutY="263.0" text="Отчёство" />
+                        <Label layoutX="308.0" layoutY="46.0" text="S" />
+                        <Label layoutX="308.0" layoutY="101.0" text="N" />
+                        <Label layoutX="308.0" layoutY="160.0" text="Средне" />
+                        <Label layoutX="308.0" layoutY="183.0" text="месячный зароботок" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TextField fx:id="pas_nomer_hi" layoutX="1197.0" layoutY="150.0" />
+      <TextField fx:id="pas_s_hi" layoutX="1197.0" layoutY="200.0" />
+      <TextField fx:id="pas_n_hi" layoutX="1197.0" layoutY="250.0" />
+      <TextField fx:id="pas_och_hi" layoutX="1197.0" layoutY="300.0" />
+      <TextField fx:id="check_num_hi" layoutX="1197.0" layoutY="350.0" />
+      <TextField fx:id="sum_hi" layoutX="1197.0" layoutY="400.0" />
+      <Label layoutX="1089.0" layoutY="14.0" text="Данные клиента">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pas_seria_hi" layoutX="1197.0" layoutY="100.0" />
+      <Label layoutX="991.0" layoutY="100.0" text="Серия пасспорта" />
+      <Label layoutX="991.0" layoutY="150.0" text="Номер пасспорта" />
+      <Label layoutX="990.0" layoutY="200.0" text="Фамилия" />
+      <Label layoutX="991.0" layoutY="250.0" text="Имя" />
+      <Label layoutX="990.0" layoutY="300.0" text="Отчество" />
+      <Label layoutX="991.0" layoutY="350.0" text="Номер счёта" />
+      <Label layoutX="991.0" layoutY="400.0" text="Сумма зачисления" />
+      <Button fx:id="add_bt" layoutX="991.0" layoutY="732.0" mnemonicParsing="false" onAction="#add_click" prefHeight="65.0" prefWidth="160.0" text="Ввести" />
+      <TableView fx:id="credit_table" layoutX="8.0" layoutY="52.0" prefHeight="155.0" prefWidth="898.0">
+         <columns>
+            <TableColumn fx:id="pas_seria2" prefWidth="135.0" text="Серия паспорта" />
+            <TableColumn fx:id="pas_nomer2" prefWidth="135.0" text="Номер паспорта" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Column X" />
+            <TableColumn fx:id="pas_s2" prefWidth="100.0" text="Фамилия" />
+            <TableColumn fx:id="pas_n2" prefWidth="100.0" text="Имя" />
+            <TableColumn fx:id="pas_och2" prefWidth="100.0" text="Отчество" />
+            <TableColumn fx:id="s" prefWidth="87.0" text="S" />
+            <TableColumn fx:id="n" prefWidth="71.0" text="N" />
+            <TableColumn fx:id="cash_per_month" prefWidth="83.0" text="Платёж" />
+            <TableColumn fx:id="credit_id" prefWidth="84.0" text="credit_id" />
+         </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="14.0" text="Таблица кредитов">
+         <font>
+            <Font name="Verdana" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="989.0" layoutY="449.0" text="Валюта" />
+      <Label layoutX="989.0" layoutY="499.0" text="S" />
+      <Label layoutX="989.0" layoutY="549.0" text="N" />
+      <Label layoutX="989.0" layoutY="599.0" text="Средне месячный зароботок" />
+      <TextField fx:id="curr_hi" layoutX="1195.0" layoutY="449.0" />
+      <TextField fx:id="s_hi" layoutX="1195.0" layoutY="499.0" />
+      <TextField fx:id="n_hi" layoutX="1195.0" layoutY="549.0" />
+      <TextField fx:id="avr_mnth_cash_hi" layoutX="1195.0" layoutY="594.0" />
+      <TextArea fx:id="wat_do_u_want" layoutX="991.0" layoutY="646.0" prefHeight="65.0" prefWidth="355.0" />
+      <Button fx:id="next_bt" layoutX="1186.0" layoutY="732.0" mnemonicParsing="false" onAction="#next_click" prefHeight="65.0" prefWidth="160.0" text="Следующий" />
+  </children>
+</AnchorPane>
